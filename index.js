@@ -9,11 +9,11 @@ const __dirname=dirname(fileURLToPath(import.meta.url));
 const app=express();
 const port=3000;
 const client=new Client.Client({
-    host: "localhost",
-    user: "postgres",
+    host: "<host_name>",
+    user: "<user_name>",
     port: 5432,
-    password: "1234",
-    database: "postgres"
+    password: "<pswd>",
+    database: "<database_name>"
 })
 
 client.connect()
