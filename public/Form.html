@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+    <title>Grilli</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="content-container">
+        <div class="image-conatiner">
+          <img src="../assets/forming.jpg" alt="" />
+        </div>
+
+        <div class="heading-content">
+          <h1>Hotel Reservation Form</h1>
+          <p class="head-para1">Please complete the form below.</p>
+
+          <p class="head-para2">
+            Your registration will be verified prior to your arrival.
+          </p>
+        </div>
+
+        <div class="form-div">
+          <form action="/confirm" method="POST">
+            <label for="name">Full Name<span>*</span></label>
+            <br />
+            <div class="name-div">
+              <div class="flex1">
+                <input type="text" id="name" name="fname" required />
+                <p class="name">First Name</p>
+              </div>
+              <div class="flex1">
+                <input type="text" id="name" name="lname" required />
+                <p class="name">Last Name</p>
+              </div>
+            </div>
+
+            <p class="add-para">Address<span>*</span></p>
+            <br />
+            <div class="street-add">
+              <div class="add1">
+                <input type="text" id="address" name="add1" required/>
+                <br />
+                <label for="address">Street Address</label>
+              </div>
+              <div class="add2">
+                <input type="text" id="address" name="add2"/>
+                <br />
+                <label for="address">Street Address Line 2</label>
+              </div>
+            </div>
+            <br />
+
+            <div class="city-div">
+              <div class="city1">
+                <input type="text" id="city" name="city" required/>
+                <br />
+                <label for="city">City<span>*</span></label>
+                <br />
+              </div>
+              <div class="state1">
+                <input type="text" id="state" name="state" required/>
+                <br />
+                <label for="state">State<span>*</span></label>
+              </div>
+            </div>
+
+            <input type="text" id="pin" name="pincode" required/><br />
+            <label for="pin" class="pin-xxx">Postal/zip Code<span>*</span></label>
+
+            <div class="phone-em-div">
+              <div class="phone1">
+                <label for="phone">Phone Number<span>*</span></label>
+                <br />
+                <input type="number" id="phone" placeholder="+91 6969696969" name="phNumber" required/>
+              </div>
+              <div class="phone1">
+                <label for="email">Email<span>*</span></label>
+                <br />
+                <input type="email" id="email" placeholder="emaple@gmail.com" name="email" required/>
+              </div>
+            </div>
+
+            <div class="arrival-div">
+              <div>
+                <label for="arrival">Arrival - Date and Time<span>*</span></label>
+              </div>
+              <div>
+                <input type="date" id="arrival" placeholder="MM-DD-YYYY" name="a_date" required/>
+                <input
+                  type="time"
+                  id="arrival"
+                  placeholder="HH:MM"
+                  name="a_time"
+                  required
+                />
+
+              </div>
+            </div>
+
+            <div class="Departure-div">
+              <div>
+                <label for="arrival">Departure - Date and Time<span>*</span></label>
+              </div>
+              <div>
+                <input type="date" id="arrival" placeholder="MM-DD-YYYY" name="d_date" required/>
+                <input type="time" id="arrival" placeholder="HH:MM" name="d_time" required/>
+                <!-- <select name="Time" id="arrival">
+                  <option value="">AM</option>
+                  <option value="">PM</option>
+                </select> -->
+              </div>
+            </div>
+
+            <div class="customer-div">
+              <div class="adult">
+                <label for="adult">Number of Adults<span>*</span></label>
+                <br />
+                <input type="number" placeholder="ex: 7" id="adult" name="adults" required/>
+              </div>
+              <div class="kids">
+                <label for="kids">Number of Kids (If there are any )</label>
+                <br />
+                <input type="number" placeholder="ex: 3" name="kids" id="kids" />
+              </div>
+            </div>
+
+            <div class="payment">
+              <label for="payment">Payment Method <span>*</span></label>
+              <br />
+
+              <div class="methods">
+                <div>
+                  <input type="radio" name="cash" id="Cash" />
+                  <label for="Cash">UPI</label>
+                </div>
+                <div>
+                  <input type="radio" name="paypal" id="Paypal" />
+                  <label for="Paypal">Net Banking</label>
+                </div>
+                <div>
+                  <input type="radio" name="Card" id="Card" />
+                  <label for="Card">Card</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="special-req">
+              <label for="request">Do you have any special request?</label>
+              <br />
+              <textarea
+                id="request"
+                cols="30"
+                rows="6"
+                placeholder="Type Here..."
+              ></textarea>
+            </div>
+
+
+            <div class="submit-btn">
+
+              <button id="submit-btn-id" type ="submit">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+
+</html>
